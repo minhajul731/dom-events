@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+</head>
+
+<body>
+    <h1>Event Handeler</h1>
+
+    <!-- <button onclick="alert(7)">Click Me</button>
+    <button onclick="console.log('Console me clicked')">Console Me</button> -->
+
+    <!-- direct work in onclick -->
+    <button onclick="document.body.style.backgroundColor = 'orange'">Click Me Orange</button>
+
+    <!-- create a function and call it in onClcik -->
+    <button onclick="makeRed()">Click Me Red</button>
+
+    <!-- create a button by using id  -->
+    <button id="make-blue-button">Click Me Blue</button>
+
+    <!-- handle event with anyounimous function -->
+    <button id="make-green-button">Click Me Blue</button>
+
+    <!-- handle by addeventlistener -->
+    <button id="make-yellow-button">Click Me Yellow</button>
+
+    <!-- handle by addeventlistener another way-->
+    <button id="make-hotpink-button">Click Me Hot Pink</button>
+
+    <!-- direct addEventListner Use -->
+    <button id="make-lightblue-button">Click Me Light Blue</button>
+
+    <script src="js/event.js"></script>
+</body>
+
+</html>

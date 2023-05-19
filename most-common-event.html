@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <p id="event-listner"></p>
+
+    <!-- using inputfield -->
+    <input type="text" id="input-field">
+    <button id="input-field-update-button">Update Text</button>
+
+    <!-- using event listener by call a function  -->
+    <button onclick="usingFunctionEventListner()">Using Function</button>
+
+    <!-- using direct function method -->
+    <button id="direct-event-listner">Direct Using Function Add Event Listner</button>
+
+    <script>
+        // using event listener by call a function
+        function usingFunctionEventListner() {
+            const usingFunction = document.getElementById('event-listner');
+            usingFunction.innerText = 'Using Function';
+        }
+
+        // using direct function method
+        document.getElementById('direct-event-listner').addEventListener('click', function () {
+            const usingDirectFunction = document.getElementById('event-listner');
+            usingDirectFunction.innerText = 'using direct function method';
+        });
+
+        // using inputfield
+        document.getElementById('input-field-update-button').addEventListener('click', function () {
+            const inputFieldText = document.getElementById('input-field');
+            const inputText = inputFieldText.value;
+            const updateParagraph = document.getElementById('event-listner');
+            updateParagraph.innerText = inputText;
+            inputFieldText.value = '';
+        });
+    </script>
+</body>
+
+</html>

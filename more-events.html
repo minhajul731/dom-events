@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Secret Message!</h1>
+    <p id="secret-message">I am agent this is a secret message!</p>
+    <input type="text" placeholder="type Delete" id="delete-input">
+    <button id="delete-btn" disabled>Delete</button>
+
+    <script>
+        document.getElementById('delete-btn').addEventListener('click', function () {
+            const secretMessage = document.getElementById('secret-message');
+            secretMessage.style.display = 'none';
+        });
+
+        // keyup
+        document.getElementById('delete-input').addEventListener('keyup', function () {
+            const deleteButton = document.getElementById('delete-btn');
+            const deleteField = document.getElementById('delete-input');
+            if (deleteField.value == 'delete') {
+                deleteButton.removeAttribute('disabled');
+            }
+            else {
+                deleteButton.setAttribute('disabled', true);
+            }
+        });
+
+
+        // focus
+        /* document.getElementById('delete-input').addEventListener('focus', function () {
+            document.body.style.backgroundColor = 'red';
+        }); */
+
+        // blur
+        /* document.getElementById('delete-input').addEventListener('blur', function () {
+            document.body.style.backgroundColor = 'green';
+        }); */
+
+        // keydown
+        /* document.getElementById('delete-input').addEventListener('keydown', function () {
+            const deleteField = document.getElementById('delete-input');
+            console.log(deleteField.value);
+        }); */
+
+        // keypress
+        /* document.getElementById('delete-input').addEventListener('keypress', function () {
+            const deleteField = document.getElementById('delete-input');
+            console.log(deleteField.value);
+        }); */
+
+        // change
+        /* document.getElementById('delete-input').addEventListener('change', function () {
+            const deleteField = document.getElementById('delete-input');
+            console.log(deleteField.value);
+        }); */
+    </script>
+</body>
+
+</html>
